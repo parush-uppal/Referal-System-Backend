@@ -4,7 +4,8 @@
   "description": "This is the project created for educational purpose",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js",
+    "build": "webpack --config webpack.config.js"
   },
   "author": "Full Stack Niraj",
   "license": "ISC",
