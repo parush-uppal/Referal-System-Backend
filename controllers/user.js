@@ -7,7 +7,7 @@ const { sendError, generateRandomByte } = require("../utils/helper");
 const PasswordResetToken = require("../models/passwordResetToken");
 
 exports.create = async (req, res) => {
-  const { name, email, password,number } = req.body;
+  const { name, email,number } = req.body;
 
   const oldUser = await User.findOne({ email });
   if (oldUser)  return  res.status(201).json({
@@ -16,7 +16,7 @@ exports.create = async (req, res) => {
       "Already Registered For the Event",
   });
 
-  const newUser = new User({ name, email, password,number});
+  const newUser = new User({ name, email,number});
   const referalLink=`https://grow-habbit.netlify.app/?referalId=${newUser._id}`
   newUser.referalLink=referalLink
   await newUser.save();

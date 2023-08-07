@@ -4,10 +4,9 @@
   "description": "This is the project created for educational purpose",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "build": "webpack --config webpack.config.js"
+    "start": "node app.js"
   },
-  "author": "Full Stack Niraj",
+  "author": "Parush Uppal",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -19,7 +18,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.5.1",
     "morgan": "^1.10.0",
-    "nodemailer": "^6.7.7"
+    "nodemailer": "^6.7.7",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
