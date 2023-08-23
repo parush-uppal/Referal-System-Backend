@@ -12,6 +12,7 @@ exports.create = async (req, res) => {
   const oldUser = await User.findOne({ email });
   if (oldUser)  return  res.status(201).json({
     referalLink:oldUser.referalLink,
+    userRefered:oldUser.userRefered,
     message:
       "Already Registered For the Event",
   });
