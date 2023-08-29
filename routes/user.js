@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post("/create", userValidtor, validate, create);
 router.get("/allUser", allUser); 
-router.get("/singleUser", singleUser); 
+router.post("/singleUser", singleUser); 
 
 
 module.exports = router;
