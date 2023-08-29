@@ -55,9 +55,8 @@ exports.allUser = async (req, res, next) => {
 
 exports.singleUser = async (req, res, next) => {
   const users =await User.findById(req.body.id);
-    
     res.status(200).json({
       success: true,
-      users,
+      users:users,
     });
 };
